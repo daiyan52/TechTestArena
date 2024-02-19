@@ -1,0 +1,13 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+{% include 'pages/navbar.html' %}
+<div class="container container-sm" style="margin-top:100px;">
+    <div class="row">
+        <form method='post'  class="col s12">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="Submit">  
+    </div>
+</div>
+{% endblock %}

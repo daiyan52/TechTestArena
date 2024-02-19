@@ -1,0 +1,15 @@
+{% extends 'pages/base.html'%}
+
+{% block content %}
+{% include 'pages/navbar.html' %}
+<div class="container container-sm" style="margin-top:50px;">
+    <h3 class="center-align">Sign Up</h3>
+    <div class="row s12 m6">
+        <form method="post">
+            {{form}}
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+    </div>
+</div>
+{% endblock %} 
