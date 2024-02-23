@@ -26,6 +26,7 @@ urlpatterns = [
     path('logout/',views.logoutView),
     path('signup/',views.signupView),
     path('accounts/',include('django.contrib.auth.urls')),
+    path('quiz/',include('quiz.urls')),
     
 
 ]

@@ -24,7 +24,7 @@
       <a href="/" class="brand-logo">2025</a>
       <a href="/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/java">Java</a></li>
+        <li><a href="{% url 'quiz:quiz_list' %}">Java</a></li>
         <li><a href="/python">Python</a></li>
         <li><a href="/aptitude">Aptitude</a></li>
         {% if user.is_authenticated %}
@@ -37,8 +37,8 @@
     </div>
 </nav>
 <ul class="sidenav" id="mobile-demo">
-  <li><a href="/java">Java</a></li>
-  <li><a href="/python">Python</a></li>
+    <li><a href="{% url 'quiz:quiz_list' %}">Java</a></li>
+    <li><a href="/python">Python</a></li>
   <li><a href="/aptitude">Aptitude</a></li>
   {% if user.is_authenticated %}
       <li><a href="{% url 'logout' }">Logout</a></li>

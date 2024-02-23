@@ -1,0 +1,14 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+    <div class="container" style="margin-top:120px;">
+        <div class="row s12">
+            <div class="col s12  m6 offset-m3 center-align">
+                {% for quiz in quizzes %}
+                <h5>{{ quiz.title }}</h5>
+                <p>{{ quiz.description }}</p>
+                <a href="{% url 'quiz:take_quiz' quiz.id %}">Take Quiz</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock%}
