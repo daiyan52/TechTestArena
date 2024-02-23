@@ -6,6 +6,15 @@ def quiz_list(request):
     quizzes = Quiz.objects.all()
     return render(request, 'quiz/quiz_list.html', {'quizzes': quizzes})
 
+def quiz_list1(request):
+    quizzes = Quiz.objects.all()
+    return render(request, 'quiz/quiz_list1.html', {'quizzes': quizzes})
+
+
+def quiz_list2(request):
+    quizzes = Quiz.objects.all()
+    return render(request, 'quiz/quiz_list2.html', {'quizzes': quizzes})
+
 def take_quiz(request, quiz_id):
     quiz = get_object_or_404(Quiz, pk=quiz_id)
     questions = Question.objects.filter(quiz=quiz)

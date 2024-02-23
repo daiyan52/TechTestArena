@@ -12,13 +12,31 @@
 {% block content %}
 {% include 'pages/navbar.html' %}
 <div class="container">
-    <h5 class="center-align">1. Ensure secure authentication and role-based authorization</h5>
-    <h5 class="center-align">2. Implement measures like browser lockdown and answer randomization.</h5>
-    <h5 class="center-align">3. Set a time limit for exam completion to maintain fairness.</h5>
-    <h5 class="center-align">4. Randomize question and answer order to deter cheating.</h5>
-    <h5 class="center-align">5. Allow students to review and receive feedback on their answers.</h5>
-    <h5 class="center-align">6. Automate grading processes for efficiency.</h5>
-    <h5 class="center-align">7. Prevent access to external resources during exams.</h5>
-    <h5 class="center-align">8. Protect student data and ensure compliance with privacy regulations.</h5>
+    <div class="row s12">
+        <div class="col s12">
+            <ul>
+                <li>Ensure secure authentication and role-based authorization</li>
+                <li>Implement measures like browser lockdown and answer randomization</li>
+                <li>Set a time limit for exam completion to maintain fairness</li>
+                <li>Randomize question and answer order to deter cheating</li>
+                <li>Allow students to review and receive feedback on their answers</li>
+                <li>Automate grading processes for efficiency</li>
+                <li>Prevent access to external resources during exams</li>
+                <li>Protect student data and ensure compliance with privacy regulations</li>
+            </ul>            
+        </div>
+    </div>
 </div>
+<style>
+    .container {
+        margin-top: 50px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    li{
+        padding: 10px;
+        font-size:20px;
+    }
+</style>
 {% endblock %}

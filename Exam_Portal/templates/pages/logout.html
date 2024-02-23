@@ -1,7 +1,20 @@
 {% extends 'pages/base.html'%}
 {% block content %}
-{% include 'pages/navbar.html' %}
-<div class="card-panel grey lighten-2" style="margin-top:200px;">
-    <h1 class="center-align">logout successfully</h1>
+<div class="container" style="margin-top:200px;">
+    <div class="row s12">
+        <div class="col s12">
+            <h4 class="red-text">logout successfully</h4>
+            <br>
+            <a  class="waves-effect green waves-light btn" href="/accounts/login">Login Again!</a>
+        </div>
+    </div>
 </div>
+<style>
+    .container{
+         display:flex;
+         justify-content:center;
+         align-items:center;
+ 
+    }
+</style>
 {% endblock %}

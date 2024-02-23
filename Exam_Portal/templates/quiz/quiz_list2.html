@@ -4,7 +4,7 @@
         <div class="row s12">
             <div class="col s12  m6 offset-m3">
                 {% for quiz in quizzes %}
-                    {% if quiz.title == 'javaQuiz' %}
+                    {% if quiz.title == 'AptitudeQuiz' %}
                     <h5>{{ quiz.title }}</h5>
                     <p>{{ quiz.description }}</p>
                     <a href="{% url 'quiz:take_quiz' quiz.id %}">Take Quiz</a>
