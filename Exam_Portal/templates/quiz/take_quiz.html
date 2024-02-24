@@ -6,12 +6,12 @@
             <form method="post" action="{% url 'quiz:quiz_result' quiz.id %}">
                 {% csrf_token %}
                 {% for question in questions %}
-                    <h5>{{ question.text }}</h5>
+                    <h5 class="green-text">{{ question.text }}</h5>
                     {% for choice in question.choice_set.all %}
                     <p>
                     <label>
-                        <input name="question_{{ question.id }}" value="{{ choice.id }}" type="radio" checked />
-                        <span>{{ choice.text }}</span>
+                        <input name="question_{{ question.id }}" value="{{ choice.id }}" type="radio" />
+                        <span class="blue-text">{{ choice.text }}</span>
                     </label>
                     </p>
                     {% endfor %}

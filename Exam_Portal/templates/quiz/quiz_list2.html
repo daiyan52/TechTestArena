@@ -5,8 +5,8 @@
             <div class="col s12  m6 offset-m3">
                 {% for quiz in quizzes %}
                     {% if quiz.title == 'AptitudeQuiz' %}
-                    <h5>{{ quiz.title }}</h5>
-                    <p>{{ quiz.description }}</p>
+                    <h5 class="teal-text">{{ quiz.title }}</h5>
+                    <p class="green-text">{{ quiz.description }}</p>
                     <a href="{% url 'quiz:take_quiz' quiz.id %}">Take Quiz</a>
                     {% endif %}
                 {% endfor %}

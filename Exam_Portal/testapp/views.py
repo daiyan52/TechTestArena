@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from testapp.forms import *  
 from django.http import HttpResponseRedirect
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+
 # Create your views here.
 def homeView(request):
     return render(request, 'pages/home.html')
@@ -19,7 +22,8 @@ def aptitudeView(request):
     return render(request, 'pages/Aptitude.html')
 
 def logoutView(request):
-    return render(request, 'pages/logout.html')
+    logout(request)
+    return redirect('/')
 
 def signupView(request):
     form = sighUpForm()

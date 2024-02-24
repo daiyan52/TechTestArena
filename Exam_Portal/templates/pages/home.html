@@ -11,10 +11,10 @@
 
 {% block content %}
 {% include 'pages/navbar.html' %}
-<div class="container">
+<div class="container" style="margin-top:50px;">
     <div class="row s12">
         <div class="col s12">
-            <ul>
+            <ul class="grey-text">
                 <li>Ensure secure authentication and role-based authorization</li>
                 <li>Implement measures like browser lockdown and answer randomization</li>
                 <li>Set a time limit for exam completion to maintain fairness</li>
@@ -27,16 +27,84 @@
         </div>
     </div>
 </div>
+<div class="card-panel yellow lighten-1">
+  {% if user.is_authenticated %}
+  <span class="center-align">
+    <h5 class="flow-text">
+      Welcome to TechTechArena! Start exploring quizzes to enhance your skills
+    </h5>
+  </span>
+  {% else %}
+  <span class="center-align">
+    <h5 class="flow-text">
+      Explore quizzes and expand your skills at TechTechArena! Sign up today
+      <a class="waves-effect black waves-light btn"><i class="material-icons right">arrow_forward</i>sign up</a>
+    </h5>
+  </span>
+  {% endif %}
+</div>
+
+<footer class="black page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="green-text">Available Quiz</h5>
+          <p class="grey-text text-lighten-4">Java</p>
+          <p class="grey-text text-lighten-4">Python</p>
+          <p class="grey-text text-lighten-4">Aptitude</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="green-text">Follow me!</h5>
+          <ul class="icons">
+            <li>
+              <a class="grey-text text-lighten-3" href="#!">
+                <i class="fab fa-linkedin-in social-icon"></i>
+              </a>
+            </li>  
+            <li>
+              <a class="grey-text text-lighten-3" href="#!">
+                <i class="fab fa-github social-icon"></i>
+              </a>
+            </li>             
+            <li>
+              <a class="grey-text text-lighten-3" href="#!">
+                <i class="fab fa-facebook-f social-icon"></i>
+              </a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="#!">
+                <i class="fab fa-instagram social-icon"></i>
+              </a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="grey darken-3 footer-copyright">
+      <div class="container">
+        <p class="center-align">© 2014 TechTestArena</p>
+      </div>
+    </div>
+  </footer>
 <style>
-    .container {
-        margin-top: 50px;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
     li{
         padding: 10px;
         font-size:20px;
+    }
+    .icons li{
+      display:inline-block;
+      padding: 5px;
+      font-size:18px;
+    }
+    .icons li:hover{
+      opacity: 0.1;
+    }
+     
+    body{
+      background-color:black;
+    }
+    .waves-effect:hover{
+      opacity:0;
     }
 </style>
 {% endblock %}
